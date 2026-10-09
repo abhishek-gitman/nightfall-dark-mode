@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Nightfall</title>
+  </head>
+  <body>
+    <header>
+      <span class="logo">🌙</span>
+      <h1>Nightfall</h1>
+    </header>
+
+    <div class="row master">
+      <div>
+        <div class="label">Dark mode</div>
+        <div class="sub" id="globalSub">On everywhere</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="globalToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="label">This site</div>
+        <div class="sub" id="siteName">—</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="siteToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="sliders" id="sliders">
+      <div class="slider-row">
+        <label for="brightness">Brightness <span id="brightnessVal">100%</span></label>
+        <input type="range" id="brightness" min="50" max="150" step="1" />
+      </div>
+      <div class="slider-row">
+        <label for="contrast">Contrast <span id="contrastVal">100%</span></label>
+        <input type="range" id="contrast" min="50" max="150" step="1" />
+      </div>
+      <div class="slider-row">
+        <label for="sepia">Sepia <span id="sepiaVal">0%</span></label>
+        <input type="range" id="sepia" min="0" max="100" step="1" />
+      </div>
+      <div class="slider-row">
+        <label for="grayscale">Grayscale <span id="grayscaleVal">0%</span></label>
+        <input type="range" id="grayscale" min="0" max="100" step="1" />
+      </div>
+    </div>
+
+    <button id="reset" class="reset">Reset adjustments</button>
+    <p class="hint">Shortcut: <kbd>Ctrl/⌘</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> toggles this site.</p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
